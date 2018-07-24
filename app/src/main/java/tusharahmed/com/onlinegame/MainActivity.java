@@ -1,6 +1,7 @@
 package tusharahmed.com.onlinegame;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -61,7 +62,10 @@ public class MainActivity extends AppCompatActivity {
                     if (!user.isEmpty()){
                         User login = dataSnapshot.child(user).getValue(User.class);
                         if (login.getPassword().equals(pwd)){
-                            Toast.makeText(MainActivity.this, "Login ok", Toast.LENGTH_SHORT).show();
+                            Intent home = new Intent(MainActivity.this, Home.class);
+                            startActivity(home);
+                            finish();
+
                         }else {
                             Toast.makeText(MainActivity.this, "Wrong password", Toast.LENGTH_SHORT).show();
                         }
