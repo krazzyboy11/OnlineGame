@@ -2,7 +2,7 @@ package tusharahmed.com.onlinegame.Model;
 
 public class Questions {
     private String Question,AnswerA,AnswerB,AnswerC,AnswerD,CorrectAnswer,
-    categoryId,isImageQuestion;
+            CategoryId,IsImageQuestion;
 
     public Questions() {
     }
@@ -14,8 +14,8 @@ public class Questions {
         AnswerC = answerC;
         AnswerD = answerD;
         CorrectAnswer = correctAnswer;
-        this.categoryId = categoryId;
-        this.isImageQuestion = isImageQuestion;
+        CategoryId = categoryId;
+        IsImageQuestion = isImageQuestion;
     }
 
     public String getQuestion() {
@@ -67,18 +67,18 @@ public class Questions {
     }
 
     public String getCategoryId() {
-        return categoryId;
+        return CategoryId;
     }
 
     public void setCategoryId(String categoryId) {
-        this.categoryId = categoryId;
+        CategoryId = categoryId;
     }
 
     public String getIsImageQuestion() {
-        return isImageQuestion;
+        return IsImageQuestion;
     }
 
     public void setIsImageQuestion(String isImageQuestion) {
-        this.isImageQuestion = isImageQuestion;
+        IsImageQuestion = isImageQuestion;
     }
 }

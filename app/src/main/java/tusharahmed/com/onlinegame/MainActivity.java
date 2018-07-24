@@ -17,6 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import tusharahmed.com.onlinegame.Common.Common;
 import tusharahmed.com.onlinegame.Model.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                         User login = dataSnapshot.child(user).getValue(User.class);
                         if (login.getPassword().equals(pwd)){
                             Intent home = new Intent(MainActivity.this, Home.class);
+                            Common.currentUser = login;
                             startActivity(home);
                             finish();
 
